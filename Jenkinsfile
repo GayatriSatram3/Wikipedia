@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building Website'
+                echo 'Building Websites'
             }
         }
 
