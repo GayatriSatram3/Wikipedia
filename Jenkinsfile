@@ -3,33 +3,29 @@ pipeline {
 
     stages {
 
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Building Application'
+                echo 'Building Website'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running Test Cases'
+                echo 'Testing Website'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying to Production Server'
+                echo 'Deployment Completed'
             }
         }
 
-    }
-
-    post {
-        success {
-            echo 'Pipeline Executed Successfully'
-        }
-
-        failure {
-            echo 'Pipeline Failed'
-        }
     }
 }
