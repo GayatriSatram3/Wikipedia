@@ -11,15 +11,25 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Testing Application'
+                echo 'Running Test Cases'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying Application'
+                echo 'Deploying to Production Server'
             }
         }
 
+    }
+
+    post {
+        success {
+            echo 'Pipeline Executed Successfully'
+        }
+
+        failure {
+            echo 'Pipeline Failed'
+        }
     }
 }
