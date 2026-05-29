@@ -21,11 +21,11 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deployment Completed'
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         echo 'Deployment Completed'
+        //     }
+        // }
 
     }
 }
